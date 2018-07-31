@@ -44,3 +44,15 @@ C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ReoGri
 C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ReoGrid_1\ReoGrid_1\obj\Debug\ReoGrid_1.FrameMain.resources
 C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ReoGrid_1\ReoGrid_1\obj\Debug\ReoGrid_1.Properties.Resources.resources
 C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ReoGrid_1\ReoGrid_1\obj\Debug\ReoGrid_1.csproj.GenerateResource.Cache
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\bin\Debug\ReoGrid_1.exe.config
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.exe
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.pdb
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\bin\Debug\ReoGrid_1.exe
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\bin\Debug\ReoGrid_1.pdb
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\bin\Debug\MySql.Data.dll
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\bin\Debug\unvell.ReoGrid.dll
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\bin\Debug\unvell.ReoGrid.xml
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.csprojResolveAssemblyReference.cache
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.FrameMain.resources
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.Properties.Resources.resources
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.csproj.GenerateResource.Cache

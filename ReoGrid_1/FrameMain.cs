@@ -44,7 +44,7 @@ namespace ReoGrid_1
             OleDbConnection cnn;
             OleDbCommand sqlcommand = new OleDbCommand();
             OleDbDataAdapter sqladapter = new OleDbDataAdapter();
-            string file = "aStuDB1.accdb";
+            string file = "StuDB1.accdb";
             connetionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= " + file + " ;Persist Security Info=False;";
             cnn = new OleDbConnection(connetionString);
             cnn.Open();
@@ -69,16 +69,14 @@ namespace ReoGrid_1
 
         void Tree(OleDbConnection cnn, IDictionary<string, List<string>> TabColNam)
         {
-            // Batch Years
+
             // Tree
-            // TreeView NewTree = new TreeView();
-            // treeView1.Nodes.Add(tableNames[i]); // Tree add all tables
-            // treeView1.Nodes.Add(treeView1.Nodes.Add("BATCH"));
-            treeView1.Nodes.Add("BATCH"); // Node [0]  Nodes must be recorded
+            treeView1.Nodes.Add("COLLEGE_NAME"); // Node [0]  Nodes must be recorded
 
             //
             ////
             /////
+            //////
             string TableNam = TabColNam.Keys.ElementAt(0);
             var ColNam = TabColNam[TableNam].ElementAt(1);
             string sqlquery = "SELECT DISTINCT " + ColNam + " FROM " + TableNam + " ;";
@@ -90,14 +88,14 @@ namespace ReoGrid_1
                 );
             var TotSems = Sql_Query(
                    cnn,
-                   TableNam = TabColNam.Keys.ElementAt(0),
-                   ColNam = TabColNam[TableNam].ElementAt(2),
+                   TableNam = TabColNam.Keys.ElementAt(1),
+                   ColNam = TabColNam[TableNam].ElementAt(1),
                    sqlquery = "SELECT DISTINCT " + ColNam + " FROM " + TableNam + " ;"
                    );
             var TotSub = Sql_Query(
                   cnn,
                   TableNam = TabColNam.Keys.ElementAt(5),
-                  ColNam = TabColNam[TableNam].ElementAt(1),
+                  ColNam = TabColNam[TableNam].ElementAt(3),
                   sqlquery = "SELECT DISTINCT " + ColNam + " FROM " + TableNam + " ;"
                   );
             var TotSubParts = Sql_Query(
@@ -133,14 +131,9 @@ namespace ReoGrid_1
                     }
                     count_sem = count_sem + 1;
                 }
-
-
-
                 count = count + 1;
             }
-
-
-
+            ////////
             //////
             ////
             //
@@ -553,7 +546,55 @@ namespace ReoGrid_1
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-     
+
+            string connetionString = null;
+            OleDbConnection cnn;
+            OleDbCommand sqlcommand = new OleDbCommand();
+            OleDbDataAdapter sqladapter = new OleDbDataAdapter();
+            string file = "StuDB1.accdb";
+            connetionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= " + file + " ;Persist Security Info=False;";
+            cnn = new OleDbConnection(connetionString);
+            cnn.Open();
+            var TabColNam = Db_TabColName(cnn);
+
+            string TableNam = TabColNam.Keys.ElementAt(0);
+            var ColNam = TabColNam[TableNam].ElementAt(1);
+            string sqlquery = "SELECT DISTINCT " + ColNam + " FROM " + TableNam + " ;";
+
+
+
+           var TotSems = Sql_Query(
+           cnn,
+           TableNam = TabColNam.Keys.ElementAt(5),
+           ColNam = "*",
+           sqlquery = "SELECT DISTINCT " + ColNam + " FROM " + TableNam + " ;"
+           );
+
+            
+
+           rGrid.CurrentWorksheet[2,1] = "Later";
+
+           for (int r = 0; r < TotSems.Rows.Count; r++)
+           {
+               
+               for (int c = 0; c < TotSems.Columns.Count; c++)
+               {
+                   rGrid.CurrentWorksheet[0, c] = TotSems.Columns[c].ColumnName;
+                   rGrid.CurrentWorksheet[r+1, c] = TotSems.Rows[r].ItemArray[c].ToString();
+               }
+           }
+
+
+           
+
+           foreach (DataRow row in TotSems.Rows)
+
+           {
+               //object field = TotSems.Rows[0].ItemArray[3]
+               //treeView1.Nodes[0].Nodes.Add(row.Field<string>(0));
+            
+           }
+
 
         }
 
