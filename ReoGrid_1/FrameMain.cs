@@ -22,8 +22,16 @@ using System.Data.SqlClient;
 
 namespace ReoGrid_1
 {
+
     public partial class FrameMain : Form
     {
+            string connetionString = null;
+            public static OleDbConnection cnn;
+            OleDbCommand sqlcommand = new OleDbCommand();
+            OleDbDataAdapter sqladapter = new OleDbDataAdapter();
+            string file = "StuDB1.accdb";
+            public static IDictionary<string, List<string>> TabColNam;
+
 
 
 
@@ -40,15 +48,10 @@ namespace ReoGrid_1
         {
 
             // DB
-            string connetionString = null;
-            OleDbConnection cnn;
-            OleDbCommand sqlcommand = new OleDbCommand();
-            OleDbDataAdapter sqladapter = new OleDbDataAdapter();
-            string file = "StuDB1.accdb";
             connetionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= " + file + " ;Persist Security Info=False;";
             cnn = new OleDbConnection(connetionString);
             cnn.Open();
-            var TabColNam=  Db_TabColName(cnn);
+            TabColNam = Db_TabColName(cnn);
 
             // Tree
             Tree(cnn, TabColNam);
@@ -94,13 +97,13 @@ namespace ReoGrid_1
                    );
             var TotSub = Sql_Query(
                   cnn,
-                  TableNam = TabColNam.Keys.ElementAt(5),
+                  TableNam = TabColNam.Keys.ElementAt(4),
                   ColNam = TabColNam[TableNam].ElementAt(3),
                   sqlquery = "SELECT DISTINCT " + ColNam + " FROM " + TableNam + " ;"
                   );
             var TotSubParts = Sql_Query(
           cnn,
-          TableNam = TabColNam.Keys.ElementAt(4),
+          TableNam = TabColNam.Keys.ElementAt(2),
           ColNam = TabColNam[TableNam].ElementAt(1),
           sqlquery = "SELECT DISTINCT " + ColNam + " FROM " + TableNam + " ;"
           );
@@ -139,7 +142,7 @@ namespace ReoGrid_1
             //
         }
 
-        public DataTable Sql_Query(OleDbConnection cnn, string TableNam, string ColNam, string sqlquery)
+        public static DataTable Sql_Query(OleDbConnection cnn, string TableNam, string ColNam, string sqlquery)
         {
             // Returns table of Sql query
             OleDbCommand sqlcommand = new OleDbCommand();
@@ -624,6 +627,15 @@ namespace ReoGrid_1
         private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             Tree_RtCl_MenuStrip.Show(treeView1, e.Location);
+        }
+
+        private void toolStripLabel3_Click(object sender, EventArgs e)
+        {
+            AddSujPart_Form1 objUI = new AddSujPart_Form1();
+            objUI.ShowDialog();
+            //objUI.Close();
+            
+
         }
 
     }

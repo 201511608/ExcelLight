@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,6 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSujPart_Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSujPart_Form1.Designer.cs">
+      <DependentUpon>AddSujPart_Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrameMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddSujPart_Form1.resx">
+      <DependentUpon>AddSujPart_Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrameMain.resx">
       <DependentUpon>FrameMain.cs</DependentUpon>
     </EmbeddedResource>

@@ -79,6 +79,8 @@
             this.Tree_RtCl_MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.Add_Toolstrip = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.Tree_RtCl_MenuStrip.SuspendLayout();
@@ -131,7 +133,9 @@
             this.cboZoom,
             this.btnChart,
             this.btnFunctions,
-            this.toolStripLabel1});
+            this.toolStripLabel1,
+            this.toolStripLabel2,
+            this.Add_Toolstrip});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -597,6 +601,18 @@
             this.showToolStripMenuItem.Size = new System.Drawing.Size(78, 22);
             this.showToolStripMenuItem.Text = "Show";
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(0, 22);
+            // 
+            // Add_Toolstrip
+            // 
+            this.Add_Toolstrip.Name = "Add_Toolstrip";
+            this.Add_Toolstrip.Size = new System.Drawing.Size(42, 22);
+            this.Add_Toolstrip.Text = "ADD";
+            this.Add_Toolstrip.Click += new System.EventHandler(this.toolStripLabel3_Click);
+            // 
             // FrameMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,6 +687,8 @@
         private System.Windows.Forms.ContextMenuStrip Tree_RtCl_MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel Add_Toolstrip;
 
     }
 }
