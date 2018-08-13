@@ -57,3 +57,4 @@ C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelL
 C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.csproj.GenerateResource.Cache
 C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.AddSujPart_Form1.resources
 C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.csprojResolveAssemblyReference.cache
+C:\Users\midas\Desktop\School Project\Aura Final\Aura Final\ReoGrid_1 (2)\ExcelLight\ReoGrid_1\obj\Debug\ReoGrid_1.Form3_AddGrid.resources

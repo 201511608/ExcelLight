@@ -54,6 +54,8 @@
             this.btnChart = new System.Windows.Forms.ToolStripButton();
             this.btnFunctions = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.Add_Toolstrip = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.cboFontSize = new System.Windows.Forms.ToolStripComboBox();
@@ -79,8 +81,7 @@
             this.Tree_RtCl_MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.Add_Toolstrip = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.Tree_RtCl_MenuStrip.SuspendLayout();
@@ -135,7 +136,8 @@
             this.btnFunctions,
             this.toolStripLabel1,
             this.toolStripLabel2,
-            this.Add_Toolstrip});
+            this.Add_Toolstrip,
+            this.toolStripLabel3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -343,6 +345,18 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(30, 22);
             this.toolStripLabel1.Text = "DB";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(0, 22);
+            // 
+            // Add_Toolstrip
+            // 
+            this.Add_Toolstrip.Name = "Add_Toolstrip";
+            this.Add_Toolstrip.Size = new System.Drawing.Size(42, 22);
+            this.Add_Toolstrip.Text = "ADD";
+            this.Add_Toolstrip.Click += new System.EventHandler(this.toolStripLabel3_Click);
             // 
             // toolStrip2
             // 
@@ -601,17 +615,12 @@
             this.showToolStripMenuItem.Size = new System.Drawing.Size(78, 22);
             this.showToolStripMenuItem.Text = "Show";
             // 
-            // toolStripLabel2
+            // toolStripLabel3
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(0, 22);
-            // 
-            // Add_Toolstrip
-            // 
-            this.Add_Toolstrip.Name = "Add_Toolstrip";
-            this.Add_Toolstrip.Size = new System.Drawing.Size(42, 22);
-            this.Add_Toolstrip.Text = "ADD";
-            this.Add_Toolstrip.Click += new System.EventHandler(this.toolStripLabel3_Click);
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(75, 22);
+            this.toolStripLabel3.Text = "ADD_BLK";
+            this.toolStripLabel3.Click += new System.EventHandler(this.toolStripLabel3_Click_1);
             // 
             // FrameMain
             // 
@@ -689,6 +698,7 @@
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripLabel Add_Toolstrip;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
 
     }
 }

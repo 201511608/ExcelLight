@@ -158,7 +158,48 @@ namespace ReoGrid_1
             sqladapter.Fill(table);
 
             return table;
+
         }
+
+                public static void Sql_Query_Insert(OleDbConnection cnn, string sqlquery)
+        {
+            // Returns table of Sql query
+
+            //var TableNam = TabColNam.Keys.ElementAt(0);
+            //var ColNam = TabColNam[TableNam];
+            //var sqlquery = "SELECT *  FROM " + TableNam + " WHERE 1=0 ;";
+
+
+            OleDbCommand sqlcommand = new OleDbCommand();
+            OleDbDataAdapter sqladapter = new OleDbDataAdapter();
+          
+            DataTable table = new DataTable();
+            sqlcommand.CommandText = sqlquery;
+            sqlcommand.Connection = cnn;
+            sqladapter.InsertCommand = new OleDbCommand(sqlquery, cnn);
+            sqladapter.InsertCommand.ExecuteNonQuery();
+            MessageBox.Show("Row(s) Inserted !! ");
+                  
+             
+        }
+               
+           public static void Sql_Query_Update(OleDbConnection cnn, string sqlquery)
+        {
+
+
+            OleDbCommand sqlcommand = new OleDbCommand();
+            OleDbDataAdapter sqladapter = new OleDbDataAdapter();
+            sqladapter.UpdateCommand = cnn.CreateCommand();
+            sqladapter.UpdateCommand.CommandText = sqlquery;
+            sqladapter.UpdateCommand.ExecuteNonQuery();
+            MessageBox.Show ("Row updated !! ");
+        }
+             
+
+
+
+
+
         public List<string> DataTable_Names(OleDbConnection cnn)
         {
             // Retrun Table names from Dataset
@@ -635,6 +676,46 @@ namespace ReoGrid_1
             objUI.ShowDialog();
             //objUI.Close();
             
+
+        }
+
+        private void toolStripLabel3_Click_1(object sender, EventArgs e)
+        {
+            AddSujPart_Form1 objUI = new AddSujPart_Form1();// for default values
+
+            //for (int r = 0; r < TotSems.Rows.Count; r++)
+            //{
+            //    for (int c = 0; c < TotSems.Columns.Count; c++)
+            //    {
+            //        rGrid.CurrentWorksheet[0, c] = TotSems.Columns[c].ColumnName;
+            //        rGrid.CurrentWorksheet[r + 1, c] = TotSems.Rows[r].ItemArray[c].ToString();
+            //    }
+            //}
+
+            var  rGrid2 = new unvell.ReoGrid.ReoGridControl();
+            rGrid2.BackColor = System.Drawing.Color.White;
+            rGrid2.ColumnHeaderContextMenuStrip = null;
+            rGrid2.LeadHeaderContextMenuStrip = null;
+            rGrid2.Location = new System.Drawing.Point(175, 64);
+            rGrid2.Name = "rGrid";
+            rGrid2.RowHeaderContextMenuStrip = null;
+            rGrid2.Script = null;
+            rGrid2.SheetTabContextMenuStrip = null;
+            rGrid2.SheetTabNewButtonVisible = true;
+            rGrid2.SheetTabVisible = true;
+            rGrid2.SheetTabWidth = 400;
+            rGrid2.ShowScrollEndSpacing = true;
+            rGrid2.Size = new System.Drawing.Size(805, 491);
+            rGrid2.TabIndex = 2;
+            rGrid2.Text = "reoGridControl1";
+            rGrid2.Click += new System.EventHandler(this.rGrid_Click);
+
+
+
+            Form3_AddGrid objUI3 = new Form3_AddGrid();
+            objUI3.ShowDialog();
+           
+
 
         }
 
